@@ -129,8 +129,8 @@ end
 def num_points_scored(name)
 
   game_hash[:home][:players].each do |player|
-    if player[:player_name] == name
-      return player[:points]
+    if player[:away][:player_name] == name
+      return player[:away][:points]
     end
 binding.pry
   end
