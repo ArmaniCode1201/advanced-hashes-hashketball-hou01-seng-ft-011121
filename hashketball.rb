@@ -1,10 +1,10 @@
-# Write your code below game_hash
+require 'pry'# Write your code below game_hash
 def game_hash
   {
     home: {
       team_name: "Brooklyn Nets",
       colors: ["Black", "White"],
-      players: [
+      players:[
         {
           player_name: "Alan Anderson",
           number: 0,
@@ -65,7 +65,7 @@ def game_hash
     away: {
       team_name: "Charlotte Hornets",
       colors: ["Turquoise", "Purple"],
-      players: [
+      players:[
         {
           player_name: "Jeff Adrien",
           number: 4,
@@ -125,5 +125,36 @@ def game_hash
     }
   }
 end
+
+def num_points_scored(name)
+
+  game_hash[:home][:players].each do |player|
+    if player[:player_name] == name
+      return player[:points]
+    end
+#binding.pry
+  end
+end
+#binding.pry
+
+  #if game_hash[:home][:players][:player_name]
+  #  game_hash[:home][:players].each do |player|
+
+  #else
+  #  game_hash[:away][:players][:player_name][:points]
+  #end
+#end
+  #game_hash[:away][:players].each do |player|
+  #  if player[:player_name] == name
+  #    return player[:points]
+  #  end
+  #end
+#end
+
+#players = game_hash[:home][:players].merge(game_hash[:away][:players])
+
+#end
+#binding.pry
+
 
 # Write code here
