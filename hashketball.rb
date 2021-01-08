@@ -132,7 +132,7 @@ def num_points_scored(name)
     if player[:away][:player_name] == name
       return player[:away][:points]
     end
-#binding.pry
+binding.pry
   end
 end
 #binding.pry
