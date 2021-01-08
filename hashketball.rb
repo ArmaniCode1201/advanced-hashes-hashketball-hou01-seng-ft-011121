@@ -127,7 +127,6 @@ def game_hash
 end
 
 def num_points_scored(name)
-  player = nil
 
   game_hash[:away][:players].each do |player_name|
     if [:away][:player_name] == name
